@@ -32,13 +32,17 @@ public class T03 {
                 isbn = input.nextLine();
                 judul = input.nextLine();
                 penulis = input.nextLine();
-                tahun = input.nextLine();
                 penerbit = input.nextLine();
                 format = input.nextLine();
+                tahun = input.nextLine();
+                kategori = input.nextLine();
+                tub = input.nextLine();
+                diskon = input.nextLine();
+                stok = Integer.parseInt(input.nextLine());
                 harga = Double.parseDouble(input.nextLine());
                 margin = Double.parseDouble(input.nextLine());
-                stok = Integer.parseInt(input.nextLine());
                 rating1 = Double.parseDouble(input.nextLine());
+                katdiskon = Double.parseDouble(input.nextLine());
                 if (rating1 >= 4.7) {
                     kategori = "Best Pick";
                 } else {
