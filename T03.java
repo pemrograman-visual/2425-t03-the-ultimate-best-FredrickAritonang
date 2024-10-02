@@ -12,20 +12,20 @@ public class T03 {
         int stok;
         double harga, margin, rating1, katdiskon;
 
-        isbn = "";
+        isbn = "0";
         judul = "";
         penulis = "";
-        penerbit = "";
+        penerbit = "0";
         format = "";
         tahun = "";
         kategori = "";
         tub = "";
         diskon = "";
-        stok = "0";
-        harga = "0";
-        margin = "0";
-        rating1 = "0";
-        katdiskon = "0";
+        stok = 0;
+        harga = 0;
+        margin = 0;
+        rating1 = 0;
+        katdiskon = 0;
         do {
             isbn = input.nextLine();
             if (isbn.equals("---")) {
