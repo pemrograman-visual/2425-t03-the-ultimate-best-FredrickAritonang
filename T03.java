@@ -57,7 +57,7 @@ public class T03 {
                     if (katdiskon > 0) {
                         diskon = "No regret";
                     } else {
-                        diskon = "_ _ _";
+                        diskon = "---";
                     }
                 }
             }
