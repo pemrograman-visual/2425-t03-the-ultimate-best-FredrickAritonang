@@ -1,6 +1,7 @@
 // 12S24001-Fredrick Aritonang
 // 12S24019-Winda N.V.Sitorus
 
+
 import java.util.*;
 import java.lang.Math;
 
