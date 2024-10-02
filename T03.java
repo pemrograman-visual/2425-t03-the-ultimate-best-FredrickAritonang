@@ -12,7 +12,7 @@ public class T03 {
         int stok;
         double harga, margin, rating1, katdiskon;
 
-        isbn = "0";
+        isbn = "";
         judul = "";
         penulis = "";
         penerbit = "";
