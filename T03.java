@@ -42,7 +42,6 @@ public class T03 {
                 harga = Double.parseDouble(input.nextLine());
                 margin = Double.parseDouble(input.nextLine());
                 rating1 = Double.parseDouble(input.nextLine());
-                katdiskon = Double.parseDouble(input.nextLine());
                 if (rating1 >= 4.7) {
                     kategori = "Best Pick";
                 } else {
@@ -65,6 +64,7 @@ public class T03 {
                     }
                 }
             }
+            katdiskon = Double.parseDouble(input.nextLine());
             katdiskon = margin / harga * -1;
             if (katdiskon >= (double) 40 / 100) {
                 diskon = "Once in a lifetime";
