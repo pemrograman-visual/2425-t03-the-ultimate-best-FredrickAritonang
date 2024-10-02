@@ -42,19 +42,19 @@ public class T03 {
                 harga = Double.parseDouble(input.nextLine());
                 margin = Double.parseDouble(input.nextLine());
                 rating1 = Double.parseDouble(input.nextLine());
-                if (rating1 >= 4.7) {
+                if (rating1 >= "4.7") {
                     kategori = "Best Pick";
                 } else {
-                    if (rating1 >= 4.5) {
+                    if (rating1 >= "4.5") {
                         kategori = "Must Read";
                     } else {
-                        if (rating1 >= 4.0) {
+                        if (rating1 >= "4.0") {
                             kategori = "Recommended";
                         } else {
-                            if (rating1 >= 3.0) {
+                            if (rating1 >= "3.0") {
                                 kategori = "Average";
                             } else {
-                                if (rating1 < 3.0) {
+                                if (rating1 < "3.0") {
                                     kategori = "Low";
                                 } else {
                                     kategori = "";
