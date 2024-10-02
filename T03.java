@@ -14,7 +14,7 @@ public class T03 {
 
         do {
             isbn = input.nextLine();
-            if (isbn.equals("_ _ _")) {
+            if (isbn.equals("---")) {
             } else {
                 judul = input.nextLine();
                 penulis = input.nextLine();
@@ -64,10 +64,10 @@ public class T03 {
             if (kategori.equals("Best Pick") && diskon.equals("Once in a lifetime")) {
                 tub = "The ultimate best";
             } else {
-                tub = "_ _ _";
+                tub = "---";
             }
             System.out.println(isbn + "|" + judul + "|" + penulis + "|" + tahun + "|" + penerbit + "|" + format + "|" + toFixed(harga,2) + "|" + toFixed(margin,2) + "|" + stok + "|" + toFixed(rating1,1) + "|" + kategori + "|" + diskon + "|" + tub);
-        } while (!isbn.equals("_ _ _"));
+        } while (!isbn.equals("---"));
     }
     
     private static String toFixed(double value, int digits) {
