@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="T03"/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-30 08:52:21 AM"/>
+        <attribute name="created" value="VVNFUjtMQVBUT1AtQjc2M09HUTY7MjAyNC0wOS0zMDswODoyMTowNCBBTTsyNjAz"/>
+        <attribute name="edited" value="VVNFUjtMQVBUT1AtQjc2M09HUTY7MjAyNC0wOS0zMDswODo1MjoyMSBBTTsxOzI3MTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="isbn, judul, penulis, penerbit, format, tahun, kategori, tub, diskon" type="String" array="False" size=""/>
+            <declare name="stok" type="Integer" array="False" size=""/>
+            <declare name="harga, margin, rating1, katdiskon" type="Real" array="False" size=""/>
+            <do expression="isbn !=&quot;_ _ _&quot;">
+                <input variable="isbn"/>
+                <if expression="isbn=&quot;_ _ _&quot;">
+                    <then/>
+                    <else>
+                        <input variable="judul"/>
+                        <input variable="penulis"/>
+                        <input variable="tahun"/>
+                        <input variable="penerbit"/>
+                        <input variable="format"/>
+                        <input variable="harga"/>
+                        <input variable="margin"/>
+                        <input variable="stok"/>
+                        <input variable="rating1"/>
+                        <if expression="rating1 &gt;=4.7">
+                            <then>
+                                <assign variable="kategori" expression="&quot;Best Pick&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="rating1 &gt;=4.5">
+                                    <then>
+                                        <assign variable="kategori" expression="&quot;Must Read&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="rating1 &gt;= 4.0">
+                                            <then>
+                                                <assign variable="kategori" expression="&quot;Recommended&quot;"/>
+                                            </then>
+                                            <else>
+                                                <if expression="rating1 &gt;=3.0">
+                                                    <then>
+                                                        <assign variable="kategori" expression="&quot;Average&quot;"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="rating1 &lt;3.0">
+                                                            <then>
+                                                                <assign variable="kategori" expression="&quot;Low&quot;"/>
+                                                            </then>
+                                                            <else>
+                                                                <assign variable="kategori" expression="&quot;&quot;"/>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="katdiskon" expression="(margin/harga)* (-1)"/>
+                <if expression="katdiskon &gt;= 40/100">
+                    <then>
+                        <assign variable="diskon" expression="&quot;Once in a lifetime&quot;"/>
+                    </then>
+                    <else>
+                        <if expression="katdiskon &gt; 20/100">
+                            <then>
+                                <assign variable="diskon" expression="&quot;Never come twice&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="katdiskon &gt; 0">
+                                    <then>
+                                        <assign variable="diskon" expression="&quot;No regret&quot;"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="diskon" expression="&quot;_ _ _&quot;"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <if expression="kategori = &quot;Best Pick&quot; and diskon = &quot;Once in a lifetime&quot;">
+                    <then>
+                        <assign variable="tub" expression="&quot;The ultimate best&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="tub" expression="&quot;_ _ _&quot;"/>
+                    </else>
+                </if>
+                <output expression="isbn &amp;&quot;|&quot;&amp; judul&amp;&quot;|&quot;&amp; penulis&amp;&quot;|&quot;&amp; tahun&amp;&quot;|&quot;&amp; penerbit&amp;&quot;|&quot;&amp; format&amp;&quot;|&quot;&amp; ToFixed (harga,2)&amp;&quot;|&quot;&amp; ToFixed (margin,2) &amp;&quot;|&quot;&amp; stok&amp;&quot;|&quot;&amp; ToFixed (rating1,1)&amp;&quot;|&quot;&amp; kategori &amp;&quot;|&quot;&amp; diskon &amp;&quot;|&quot;&amp; tub" newline="True"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>
