@@ -4,7 +4,7 @@
 import java.util.*;
 import java.lang.Math;
 
-public class T03{
+public class T03 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class T03{
         isbn = "0";
         judul = "";
         penulis = "";
-        penerbit = "0";
+        penerbit = "";
         format = "";
         tahun = "";
         kategori = "";
@@ -27,9 +27,9 @@ public class T03{
         rating1 = 0;
         katdiskon = 0;
         do {
-            isbn = input.nextLine();
             if (isbn.equals("---")) {
             } else {
+                isbn = input.nextLine();
                 judul = input.nextLine();
                 penulis = input.nextLine();
                 tahun = input.nextLine();
