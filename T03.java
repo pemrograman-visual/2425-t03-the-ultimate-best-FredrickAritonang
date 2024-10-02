@@ -21,6 +21,11 @@ public class T03 {
         kategori = "";
         tub = "";
         diskon = "";
+        stok = "0";
+        harga = "0";
+        margin = "0";
+        rating1 = "0";
+        katdiskon = "0";
         do {
             isbn = input.nextLine();
             if (isbn.equals("---")) {
