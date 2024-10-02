@@ -8,8 +8,8 @@ public class T03 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String isbn, judul, penulis, penerbit, format, tahun, kategori, tub, diskon;
-        int stok;
+        String isbn, judul, penulis, penerbit, format, tahun, kategori, tub, stok;
+        int diskon;
         double harga, margin, rating1, katdiskon;
 
         isbn = "";
@@ -20,8 +20,8 @@ public class T03 {
         tahun = "";
         kategori = "";
         tub = "";
-        diskon = "";
-        stok = 0;
+        diskon = 0;
+        stok = "";
         harga = 0;
         margin = 0;
         rating1 = 0;
@@ -37,8 +37,8 @@ public class T03 {
                 tahun = input.nextLine();
                 kategori = input.nextLine();
                 tub = input.nextLine();
-                diskon = input.nextLine();
-                stok = Integer.parseInt(input.nextLine());
+                diskon = Integer.parseInt(input.nextLine());
+                stok = input.nextLine();
                 harga = Double.parseDouble(input.nextLine());
                 margin = Double.parseDouble(input.nextLine());
                 rating1 = Double.parseDouble(input.nextLine());
@@ -79,7 +79,7 @@ public class T03 {
                     }
                 }
             }
-            if (kategori.equals("Best Pick") && diskon.equals("Once in a lifetime")) {
+            if (kategori.equals("Best Pick") && diskon == "Once in a lifetime") {
                 tub = "The ultimate best";
             } else {
                 tub = "---";
